@@ -33,6 +33,7 @@ set hidden
 " navigate through buffers
 :nnoremap <C-l> :bnext<CR>
 :nnoremap <C-h> :bprevious<CR>
+:nnoremap <C-w> :bdelete<CR>
 
 " navigate through split windows
 " down
@@ -70,3 +71,6 @@ set wildmenu
 
 " case-insensitive search
 "set wildignorecase
+
+" keep cursor line vertically in the centre
+set so=999

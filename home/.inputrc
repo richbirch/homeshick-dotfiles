@@ -1,0 +1,7 @@
+#$include /etc/inputrc
+
+"\C-h": backward-word
+"\C-j": next-history
+"\C-k": previous-history
+"\C-l": forward-word
+

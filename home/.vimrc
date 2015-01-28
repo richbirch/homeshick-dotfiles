@@ -48,7 +48,7 @@ nnoremap <C-Home> <C-w>h
 syntax on
 
 " Map <CTRL>-B to run PHP parser check
-noremap <C-B> :!php -l %<CR>
+"noremap <C-B> :!php -l %<CR>
 
 " Map nerdtree to Ctrl-e
 map <C-o> :NERDTreeToggle<CR>
@@ -74,3 +74,10 @@ set wildmenu
 
 " keep cursor line vertically in the centre
 set so=999
+
+" xdebug vagrant setup
+if !exists("g:vdebug_options")
+    let g:vdebug_options = {}
+endif
+let g:vdebug_options['server'] = "192.168.1.1"
+let g:vdebug_options['path_maps'] = { "/var/www/html": "/home/rich/dev" }

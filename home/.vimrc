@@ -48,7 +48,7 @@ nnoremap <C-Home> <C-w>h
 syntax on
 
 " Map <CTRL>-B to run PHP parser check
-noremap <C-B> :!php -l %<CR>
+"noremap <C-B> :!php -l %<CR>
 
 " Map nerdtree to Ctrl-e
 map <C-o> :NERDTreeToggle<CR>

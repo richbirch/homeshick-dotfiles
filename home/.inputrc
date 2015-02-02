@@ -1,4 +1,4 @@
-#$include /etc/inputrc
+$include /etc/inputrc
 
 "\C-h": backward-word
 "\C-j": next-history

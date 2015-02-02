@@ -139,11 +139,11 @@ bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
 bindsym XF86MonBrightnessUp exec xbacklight -inc 1 -time 50 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 1  -time 50 # decrease screen brightness
 
-# turn screen off after 10 minutes
-exec --no-startup-id xset dpms 300
+# turn screen off after some seconds
+exec --no-startup-id xset dpms 600
 
-# lock screen after 10 minutes
-exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 333333'
+# lock screen after some minutes
+exec --no-startup-id xautolock -time 10 -locker 'i3lock -c 333333'
 
 # manually lock screen
 bindsym $mod+Shift+s exec --no-startup-id i3lock -c 333333
@@ -153,6 +153,7 @@ bindsym $mod+Shift+Tab workspace prev
 
 # hide edge borders
 hide_edge_borders both
+#new_window pixel 1
 
 # default window colors
 # class                 border  backgr. text    indicator
@@ -164,9 +165,9 @@ hide_edge_borders both
 
 # custom window colors (border background text indicator)
 # class                 border  backgr. text    indicator
-client.focused          #dddddd #dddddd #000000 #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
+client.focused          #999999 #222222 #999999 #2e9ef4
+client.focused_inactive #222222 #222222 #555555 #484e50
+client.unfocused        #222222 #222222 #555555 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 #client.placeholder      #000000 #0c0c0c #ffffff #000000
 

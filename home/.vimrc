@@ -11,6 +11,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'joonty/vdebug.git'
+Bundle 'joonty/vim-phpqa.git'
+Bundle 'joonty/vim-phpunitqf.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -37,9 +39,9 @@ set hidden
 
 " navigate through split windows
 " down
-nnoremap <C-k> <C-w><C-j>
+nnoremap <C-j> <C-w><C-j>
 " up
-nnoremap <C-j> <C-w><C-k>
+nnoremap <C-k> <C-w><C-k>
 " right
 nnoremap <C-End> <C-w>l
 " left
@@ -79,5 +81,12 @@ set so=999
 if !exists("g:vdebug_options")
     let g:vdebug_options = {}
 endif
+
 let g:vdebug_options['server'] = "192.168.1.1"
 let g:vdebug_options['path_maps'] = { "/var/www/html": "/home/rich/dev" }
+
+let g:phpqa_codesniffer_args = "--standard=PSR2"
+
+nnoremap <C-t> :Test<CR>
+nnoremap <C-S-t> :Test %<CR>
+

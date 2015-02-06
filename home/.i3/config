@@ -148,8 +148,8 @@ exec --no-startup-id xautolock -time 10 -locker 'i3lock -c 333333'
 # manually lock screen
 bindsym $mod+Shift+s exec --no-startup-id i3lock -c 333333
 
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab workspace next
 
 # hide edge borders
 hide_edge_borders both

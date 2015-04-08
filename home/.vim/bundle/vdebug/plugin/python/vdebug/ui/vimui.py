@@ -58,8 +58,8 @@ class Ui(vdebug.ui.interface.Ui):
             self.statuswin.create()
             self.statuswin.set_status("loading")
 
-            self.watchwin.set_height(20)
-            self.statuswin.set_height(5)
+            self.watchwin.set_height(100)
+            self.statuswin.set_height(1)
 
             logwin = LogWindow(self,'rightbelow 6new')
             vdebug.log.Log.set_logger(\
@@ -450,7 +450,7 @@ class WatchWindow(Window):
             vim.command('%s | python debugger.runner.ui.watchwin.is_open = False' % cmd)
 
     def write(self, msg, return_focus = True):
-        Window.write(self, msg, after="normal gg")
+        Window.write(self, msg)
 
 class StatusWindow(Window):
     name = "DebuggerStatus"

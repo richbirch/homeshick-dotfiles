@@ -32,6 +32,8 @@ URxvt.perl-ext-common: default,clipboard,matcher,selection-to-clipboard,keyboard
 URxvt.keysym.Control-Shift-C: perl:clipboard:copy
 URxvt.keysym.Control-Shift-V: perl:clipboard:paste
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.clipboard.copycmd: xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
 
 URxvt.keysym.M-Down: \033[1;3B
 URxvt.keysym.M-Up: \033[1;3A

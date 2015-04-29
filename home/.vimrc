@@ -15,6 +15,7 @@ Bundle 'joonty/vim-phpqa.git'
 Bundle 'joonty/vim-phpunitqf.git'
 Bundle 'stephpy/vim-php-cs-fixer'
 Plugin 'shawncplus/phpcomplete.vim'
+Bundle 'evidens/vim-twig.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,7 +85,7 @@ set so=999
 " xdebug vagrant setup
 let g:vdebug_options = {
 \    'server': '192.168.50.1',
-\    'path_maps': { "/var/www/html": "/var/dev" },
+\    'path_maps': { "/var/www/html": "/home/rich/dev" },
 \    'break_on_open': 0,
 \    'continuous_mode': 1
 \}
